@@ -1,0 +1,28 @@
+﻿<Window x:Name="window" x:Class="litepadGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:litepadGUI"
+        mc:Ignorable="d"
+        Title="LitePad" Height="450" Width="800" Icon="img/litepad.png" Background="#FF1D1D1D" Foreground="White" FontFamily="Calibri" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="WorkArea" Grid.Row="1" Grid.Column="0" Padding="5" Margin="10" 
+                 BorderThickness="0" 
+                 Foreground="{Binding Foreground, ElementName=window}"
+                 TextWrapping="Wrap" KeyDown="WorkArea_KeyDown" 
+                 FontSize="14" FontFamily="/litepadGUI;component/fonts/#Comfortaa"
+                 AcceptsReturn="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF535353" Opacity="0.3"/>
+            </TextBox.Background>
+        </TextBox>
+    </Grid>
+</Window>
